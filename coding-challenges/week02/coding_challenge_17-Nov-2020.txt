@@ -1,0 +1,29 @@
+Write brief description of all the below commands.
+
+1. Git pull-      It pulls the repository files from GITHub cloud to local computer so that the user can work on it and modify the codes according to the requirements thereby not interferring with the main code in the cloud.
+                  
+
+2. Git push -     It pushes the changes to repository files made by the user  from local computer to  GITHub repository in the cloud so that the files can be updated in the main server ofthe company. 
+
+3. Git merge-     This command merges two branches into one (the one we are working and the one's name we enter) .
+                  If merged to the main branch then after merging the branch can be deleted or kept as it is as required by the user.
+
+4. Git log   -    It displays all the commits we have done and their SHA till then at that particular branch. 
+                  It also displays the details of the user's details(name and email Id) along with the -m comments the user entered for his convenience. 
+
+5. Git status -   It shows us staging and un-staging area of the working tree.
+                  If any changes are made to the file then we can know it via this as it shows modified in red colour and therefore we can commit the changes.
+
+6. Git commit -   By this we commit (save) the changes we made to the file and make them permanent.
+                  It creates checkpoints like steps to which we can revert back and modify our code according to our needs.
+
+7. Git init -     It will initialize an empty GIT repository therefore letting GIT keep track of it.
+
+8. Git clone -    It will clone the repository from the cloud (GIThub profile) to the local computer. It is to be done at the first time only.
+
+9. Git branch -   It will tell us on which branch we are currently working on , and if we write branch name next to this command we can switch to that branch.
+
+10.Git Checkout - It will allow us to go back to the commit (SHA) we want so that from there we can create a branch and conitinue in different path or do whatever is necessary.
+                  It lets us make a temporary new branch in a detached head state from where the changes we make will not affect the master branch.
+                  It is also used to switch between branches or to a particular SHA.
+                  
