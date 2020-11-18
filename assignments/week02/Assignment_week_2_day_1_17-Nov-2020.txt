@@ -1,0 +1,25 @@
+Q1. Write down in detail what happens when you enter www.google.com in a web browser ?
+
+
+For any website to run it needs two things, an IP address and a Port. When we type google.com our computer goes to a specific IP address
+and port to fetch the website for us. Now IP address are usually like 6.7.8.8 which are difficult to remember therefore domain name comes
+into picture. A domain name is basically an easier way to write the same IP address so that everyone can remember, like a pet name for
+example google.com is the domain name of 6.7.8.8:5000 where 5000 is the port and rest is the IP address. We can  buy the domain name from 
+websites like godaddy, namescheap etc which act as brokers for IETF to rent out the domain names.
+
+Computer doesn't know the IP address of the domain names we enter therefore it goes to an entity known as Domain Name Server(DNS) to 
+fetch the IP address.DNS has the mapping of the domain names to their respective IP addresses and ports which is 
+managed and controlled by IETF (Internet Engineering Task Force). The IETF is responsible to 
+manage the Internet and the DNS servers. Therefore when DNS server gives our browser the IP address and port our browser goes to that
+address and fetches the website from that address where code is stored in a server (computer) of a Hosting Service Provider.
+
+Its very difficult for the company's owner to have a computer with his website in it and manage it 24X7 (eg. amazon with 10 to 20k 
+computers running their website) therefore for because of this problem cloud providers were formed in 2005. What they do basically
+is rent their computer to the owner for their website to run and manage it 24X7 for them and in return charge them some amount yearly
+ eg. AWS,GCP etc.
+
+
+
+
+
+
