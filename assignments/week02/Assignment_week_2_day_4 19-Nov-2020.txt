@@ -1,0 +1,43 @@
+Write a short note on all the operators we have covered ?
+
+Suppose a and b are variables used for the following operators wherein a is the first number and b is the second number.
+
++    This operator adds both a and b variable
+
+-    This operator subtracts b from a.
+
+*    This operator multiplies both a and b variable
+
+/    This operator divides a from b and gives the quotient.
+
+//   This operator divides a from b and gives on integer part of the quotient as output
+
+%    This operator divides a from b and thereby gives remainder as the output.
+
+
+	BOOLEAN OPERATORS
+
+
+== This is an Boolean equality operator which checks the values and gives true or false depending on the condition.
+
+	a=5
+	b=5
+	a==b  Ans- True
+
+	a=5
+	b=6
+	a==6 Ans-False
+
+!=  This is an Boolean in-equality operator which checks if the value is not equal to the condition and gives true false as output
+
+	a=5
+	b=6
+	a!=b Ans-True
+
+	a=5
+	b=5
+	a!=b Ans-False
+
+
+
+
