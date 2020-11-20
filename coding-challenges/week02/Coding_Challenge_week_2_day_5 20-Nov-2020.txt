@@ -1,0 +1,36 @@
+Q1. Write a program to check if a no is even or odd. If its even print even else print odd.
+
+	Ans-1
+
+print("Enter the number to be checked whether its even  or odd")
+
+number = int(input())
+
+if number %2 ==0:
+    print("The number is even")
+else:
+    print("The number is odd")
+
+---------------------------------------------------------------------------------------------------
+
+	Ans-2
+1
+3
+4
+8
+9
+10
+11
+
+----------------------------------------------------------------------------------------------------
+	Ans-3
+
+1
+4
+
+
+
+
+
+
+
