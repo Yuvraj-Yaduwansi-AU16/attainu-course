@@ -1,0 +1,49 @@
+Q1. Create a calculator where user have a menu to perform addition / subtraction / multiplication
+/ division / display tables . Using loops in python.
+
+
+
+print("Welcome To Your calculator")
+for j in range(100):
+    print("\n Enter your choice \n + for addition \n - for subtraction \n * for multiplication \n / for division \n t to print tables \n x for exit")
+    user_input= input()
+    if(user_input == "x"):
+     break
+    print("Enter first number")
+    num1=int(input())
+    print("Enter second number")
+    num2=int(input())    
+    if(user_input == "+" ):
+     print("The addition of two numbers is", num1+num2)
+    elif (user_input == "-" ):
+     print("The subtraction of two numbers is", num1-num2)
+    elif (user_input == "*" ):
+     print("The multiplication of two numbers is", num1*num2)
+    elif (user_input == "/" ):
+     print("The division of two numbers is", num1/num2)
+    elif (user_input == "t" ):
+     print("Table of first number is")
+     for i in range(1,11):
+         print(num1,"X",i,"=",num1*i )
+     print("Table of second number is")
+     for i in range(1,11):
+         print(num2,"X",i,"=",num2*i )
+
+
+
+Q2. Write a program to check if a year given by user is leap year or not.
+
+
+for i in range(100):
+    print("\n Enter the year you want to check whether is leap year or not \n Enter -1 if you wanna exit")
+    user_input= int(input())
+    if(user_input == -1):
+     break
+    elif (user_input % 4 == 0):
+     print("The year you have entered is a leap year")
+    else:
+         print("The year you have entered is not a leap year")
+
+
+
+
