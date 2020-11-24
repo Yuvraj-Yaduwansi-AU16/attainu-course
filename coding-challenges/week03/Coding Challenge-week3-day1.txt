@@ -1,0 +1,20 @@
+Q1. Write a program to print the vowels in a particular str given by user
+
+
+print("Enter the String in which you want to check for vowels")
+user_input= input()
+for i in user_input:
+    if i== "a" or i== "e" or i== "i" or i== "o"  or i== "u" or i== "A" or i== "E" or i== "I" or i== "O" or i== "U" :
+        print("The vowels in  the string is" , i)
+
+----------------------------------------------------------------------------------------------------
+
+Q2. Write a program to print sum of n natural numbers .
+
+
+print("Enter the Number")
+user_input= int(input())
+sum=0
+for i in range (1, user_input+1):
+    sum+=i
+print("The sum of natural numbers is" , sum)
