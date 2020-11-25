@@ -1,0 +1,95 @@
+Q1. What will be the output ?
+1. def printMax(a, b):
+2.   if a > b:
+3.     print(a, 'is maximum')
+4.   elif a == b:
+5.      print(a, 'is equal to', b)
+6.   else:
+7.     print(b, 'is maximum')
+8. printMax(3, 4)
+
+
+
+A1.-  4 is maximum.
+--------------------------------------------
+Q2. What will be the output ?
+1. x = 50
+2. def func(x):
+3.    print('x is', x)
+4.    x = 2
+5.    print('Changed local x to', x)
+6. func(x)
+7. print('x is now', x)
+
+
+A.2- 
+
+x is 50
+Changed local x to 2
+x is now 50
+
+--------------------------------------------
+Q3. Write a function which will take a str as input and will return a string where vowels are
+removed.
+Str = ABCDEFG
+Result = BCDFG
+
+
+print("Enter the String to remove vowels from it")
+user_input= input()
+result=""
+for i in user_input:
+    if i== "a" or i== "e" or i== "i" or i== "o"  or i== "u" or i== "A" or i== "E" or i== "I" or i== "O" or i== "U" :
+        continue
+    else:
+        result+=i
+
+print("The new string without vowels is \n" , result)
+
+----------------------------------------------------------------------------------------------
+
+Q1...   PATTERN 1
+
+     x
+    x x
+   x x x
+  x x x x
+ x x x x x
+x x x x x x
+
+
+print("Enter the number till where you wanna print pattern")
+user_input = int(input())
+
+for i in range(1,user_input+1):
+    print()
+    for j in range (user_input,0,-1):
+        if(j> i):
+            print(end=" ")
+        else:
+            print("x" , end= " ")
+
+---------------------------------------------------------------------------------------------------
+
+Q2..  PATTERN 2
+
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+16 17 18 19 20 21
+
+
+
+print("Enter the number of rows you wanna print the pattern")
+user_input = int(input())
+cnt=1
+for i in range(1,user_input+1):
+    print()
+    for j in range(1,i+1):
+        print(cnt , end=" ")
+        cnt+=1
+
+
+
