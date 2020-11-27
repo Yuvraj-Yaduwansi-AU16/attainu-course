@@ -1,0 +1,93 @@
+
+Q1. Given a word like “A boy is good”. Reverse the words in it
+Output: good is boy A
+
+
+print("Enter the string  to print in reverse")
+str= input()
+A=list()
+word=""
+for i in str:
+    if i==  " ":
+         A.append(word)
+         word=""
+    else:
+        word+=i
+
+A.append(word)
+A=A[::-1]
+answer=""
+for j in A:
+    answer+=j+" "
+
+print(answer)
+
+----------------------------------------------------------------
+
+Q2. Given a string S = “hello this is me and rohan and vijay”
+Replace and with a “comma
+
+        
+       
+print("Enter the string in which you wanna replace and with ,")
+str= input()
+A=list()
+word=""
+for i in str:
+    if i==  " ":
+        if word == "and" or word == "And" or word  =="AND":
+            A.append(",")
+            word=""
+        else:
+            A.append(word)
+            word=""
+    else:
+        word+=i
+if word !=  "and":
+    A.append(word)
+
+answer=""
+for j in A:
+     answer+=j+" "
+
+print(answer)
+
+------------------------------------------------------------------
+Q3. Given a string reverse it.
+Eg “Attainu”
+Output: “uniattA”
+
+
+
+print("Enter the string which you wanna reverse")
+str= input()
+A=list()
+for i in str:
+    A.append(i)
+answer=""
+A=A[::-1]
+for j in A:
+    answer+=j
+print(answer)
+
+-------------------------------------------------------------------
+
+Q4. Given a string S = “hello everybody”
+Make every word initial Capital.
+Output: Hello Everybody
+
+print("Enter the string to capitalize first character")
+str= input()
+word=""
+answer=""
+for i in str:
+    if i == " ":
+        word=word.capitalize()
+        answer+=word+" "
+        word=""
+    else:
+        word+=i
+word=word.capitalize()
+answer+=word
+print(answer)
+--------------------------------------------------------------------
