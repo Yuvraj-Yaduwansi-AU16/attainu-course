@@ -1,0 +1,91 @@
+Q1. Count no occurrences of a word in a string, where word is given by a user.
+s = “hello a hello hi hello ok hello”
+word: = hello
+output:
+4
+
+
+
+print("Enter the string to check for occurences")
+str=input()
+word=""
+lst=[]
+for i in str:
+    if i==" ":
+        lst.append(word)
+        word=""
+    else:
+        word+=i
+lst.append(word)
+word=""
+word_dict=dict()
+for i in lst:
+    if i in word_dict:
+        word_dict[i]+=1
+    else:
+        word_dict[i]=1
+# print(word_dict)
+for i in word_dict:
+    print("Word" , i , "is repeated" , word_dict[i] , "times")
+----------------------------------------------------------------------------
+Q2. Write a python program to find the circumference and area of a circle with a given radius.
+
+print("Enter radius of the circle")
+radius= float(input())
+circumference= 2*3.14*radius
+area= 3.14*radius*radius
+print("Area of the circle is" , area)
+print("Circumference of the circle is" , circumference)
+---------------------------------------------------------------------------------
+Q3. Take input from user items and their quantity. And then print the item with the maximum quantity.
+Eg.
+Apple 5
+Banana 10
+Grapes 50
+Output:
+Grapes
+
+
+
+print("Enter the number of items you wanna input")
+items= int(input())
+items_dict=dict()
+for i in range (0,items):
+    print("Enter item")
+    keys= input()
+    print("Enter item quantity")
+    values= int(input())
+    items_dict[keys]=values
+# print(items_dict)
+maximum_item=""
+maximum_item_quatity=0
+for key , value in items_dict.items(): 
+    if maximum_item_quatity< value:
+        maximum_item_quatity=value
+        maximum_item= key
+
+print("Maximum quatity item is" , maximum_item , "with quantity" , maximum_item_quatity)
+------------------------------------------------------------------------------------------
+Q4. palindromes are strings which are read the same from left to right and right to left. Now given a string
+s check if it is a palindrome or not ?
+Eg.
+naman: True
+Apple: False
+nan: True
+
+
+print("Enter string to check if its palindrome")
+str=input()
+lst=[]
+for i in str:
+    lst.append(i)
+lst=lst[::-1]
+
+reverse=""
+for j in lst:
+    reverse+=j
+if str == reverse:
+    print("String is a palindrome string" , str)
+else:
+    print("String is not a palindrome string" , str)
+
