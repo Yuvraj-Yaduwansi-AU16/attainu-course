@@ -1,0 +1,51 @@
+Q1. Write a program to find the count of all even no’s and odd no’s in an array / list
+Eg [1,2,3,4,5,6,7,8,9,10]
+Odd_count = 5
+Even_count = 5
+
+
+
+
+lst = [] 
+even=0
+odd=0
+n = int(input("Enter number of elements : ")) 
+print("Enter the elements")
+for i in range(0, n):
+    ele = int(input())
+    lst.append(ele) # adding the element 
+for i in lst:
+    if i%2==0:
+        even+=1
+    else:
+        odd+=1
+print("Even_count=" , even)
+print("Odd_count=" , odd)
+-----------------------------------------------------------------------------------------------
+Q2. Write a program to find the count of every vowel in a string eg.
+S = “envelope”
+Output :
+E -> 3
+O -> 1
+
+print("Enter the String")
+str=input()
+vowel_a=0
+vowel_e=0
+vowel_i=0
+vowel_o=0
+vowel_u=0
+for i in str:
+    if i=='a' or i=='A':
+        vowel_a+=1
+    elif i=='e' or i=='E':
+        vowel_e+=1
+    elif i=='i' or i=='I':
+        vowel_i+=1
+    elif i=='o' or i=='O':
+        vowel_o+=1
+    elif i=='u' or i=='U':
+        vowel_u+=1
+
+print("All vowel count present in string are as follows:")
+print("A->", vowel_a , "\n", "E->", vowel_e , "\n" , "I->" , vowel_i , "\n" , "O->" , vowel_o , "\n" , "U->" , vowel_u) 
