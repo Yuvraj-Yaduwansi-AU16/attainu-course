@@ -41,7 +41,7 @@ ANS-2
 
 
 # Here the Time Complexity is -> O(log digit_number to the base 10)
-# and the Space complexity is -> O(length of list digits_list +length of list digits_string_list+ variable digits_string+ variable digit_number + length of list digits+ variable digit_string)
+# and the Space complexity is -> O(length of list digits)
 
 
 
@@ -69,7 +69,7 @@ ANS-2
 
 
 # Here the Time Complexity is -> O(length of list final_digits_list)
-# and the Space complexity is -> O(length of list result +length of list digits_string_list+ variable digits_string+length of list digits+ variable digits_number+ variable final_digits_list +variable digit)
+# and the Space complexity is -> O(length of list digit)
 
 
 
@@ -96,4 +96,4 @@ class Solution:
         return digits
 
 # Here the Time Complexity is -> O(length-1 of list)
-# and the Space complexity is -> O(variable carry+ variable index+ list length digits)
+# and the Space complexity is -> O(list length digits)
