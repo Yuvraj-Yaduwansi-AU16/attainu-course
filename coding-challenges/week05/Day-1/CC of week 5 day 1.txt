@@ -1,0 +1,99 @@
+
+Paste the solution in the given link : https://leetcode.com/problems/rotate-array/
+
+
+------------SOLUTIONS NEED TO BE RUN ON LEETCODE-----------------------------
+ANS-1
+
+  
+        for k in range(k):
+            nums.insert(0,nums[len(nums) - 1])
+            nums.pop()
+
+
+
+# Here the Time Complexity is -> O(k)
+# and the Space complexity is -> in test example list size is 7 so in that case its O(7) whereas in general its O(length of the list)
+
+
+
+ANS-2
+
+------- First Approach :-
+
+
+        digits_string_list = [str(x) for x in digits]
+        digits_string = "".join(digits_string_list)
+        if int(digits_string) == 0:
+            return digits[0:-1] + [1]
+        digits_number = int(digits_string)
+        digits_number += 1
+        return self.output(digits_number)
+
+    def output(self, digits_number):
+        digits_list = []
+        while digits_number > 0:
+            digits_list.append(digits_number % 10)
+            digits_number //= 10
+        return digits_list[::-1] 
+
+
+
+
+# Here the Time Complexity is -> O(log digit_number to the base 10)
+# and the Space complexity is -> O(length of list digits_list +length of list digits_string_list+ variable digits_string+ variable digit_number + length of list digits+ variable digit_string)
+
+
+
+---- Second Approach :-
+
+
+
+	digits_string_list = [str(x) for x in digits]
+        digits_string = "".join(digits_string_list)
+        if int(digits_string) == 0:
+            return digits[0:-1] + [1]
+        digits_number = int(digits_string)
+        digits_number += 1
+        return self.output(digits_number)
+
+    def output(self, digits_number):
+        result = []
+        final_digits_list = str(digits_number)
+        for digit in final_digits_list:
+            result.append(int(digit))
+        return result
+
+
+
+
+
+# Here the Time Complexity is -> O(length of list final_digits_list)
+# and the Space complexity is -> O(length of list result +length of list digits_string_list+ variable digits_string+length of list digits+ variable digits_number+ variable final_digits_list +variable digit)
+
+
+
+
+--Third Approach :-
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        carry=0
+        index= len(digits)
+        index-=1
+        carry = ((digits[index])+1)//10
+        digits[index]= (digits[index]+1)%10
+        index-=1
+        if carry>0:
+            while index >=0:
+                if carry ==0:
+                    break
+                carry = (digits[index]+1)//10
+                digits[index]= (digits[index]+1)%10
+                index-=1
+        if carry ==1:
+            digits.insert(0,1)
+        return digits
+
+# Here the Time Complexity is -> O(length-1 of list)
+# and the Space complexity is -> O(variable carry+ variable index+ list length digits)
