@@ -1,0 +1,73 @@
+-----------------Ans-1--------------
+
+Link---  . https://leetcode.com/problems/matrix-diagonal-sum/
+
+
+class Solution:
+    def diagonalSum(self, mat: List[List[int]]) -> int:
+        length = len (mat)
+        sec_diag = length-1
+        sum=0
+        for i in range (length):
+            sum+=mat[i][i]
+            sum+=mat[i][sec_diag]
+            sec_diag-=1
+        if length %2==1:
+            sum-=mat[(length-1)//2][(length-1)//2]
+        return sum
+                    
+
+
+
+----------------------------Ans-2-------------------------------
+
+Link----      https://leetcode.com/problems/lucky-numbers-in-a-matrix/         
+
+
+
+class Solution:
+    def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
+        lucky_numbers=list()
+        for i in range (len(matrix)):
+            num=matrix[i][0]
+            for j in range (len(matrix[0])):
+                if num>= matrix [i][j]:
+                    max_point=j
+                    num= matrix [i][j]
+            num_for_lucky_number=num
+            for k in range (len(matrix)):
+                if num<matrix[k][max_point]:
+                    num=matrix[k][max_point]
+            if num_for_lucky_number==num:
+                lucky_numbers.append(num_for_lucky_number)
+        return lucky_numbers
+
+
+---------------------------Ans-3-------------------------------------------
+
+
+#####Run in VS-Code
+
+
+print("Enter the size of square matrix you want")
+size=int(input())
+matrix = list()
+for i in range (size):
+    matrix_rows=list()
+    for j in range (size):
+        print("Enter number")
+        num = int(input())
+        matrix_rows.append(num)
+    matrix.append(matrix_rows)
+print()
+print("Matrix with only upper triangle part is")
+inner_loop_size=size
+for i in range (size):
+    for j in range (inner_loop_size):
+        print(matrix[i][j] , end="")
+    inner_loop_size-=1
+    print()
+
+
+ 
+                
