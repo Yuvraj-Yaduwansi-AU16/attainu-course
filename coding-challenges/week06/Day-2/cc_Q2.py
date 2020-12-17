@@ -1,11 +1,3 @@
---------------Ans-1--------------------------------------
-
-class Solution:
-    def mySqrt(self, x: int) -> int:
-        res=int(math.sqrt(x))
-        return res
-
----------------Ans-2-------------------------------------
 class Solution:
     def searchRange(self, A: List[int], target: int) -> List[int]:
         n=len(A)
@@ -36,18 +28,3 @@ class Solution:
                 left=mid+1
         ls=[ans,ans1]
         return ls
-
---------------------------Ans-3-------------------------------
-class Solution:
-    def findPeakElement(self, nums: List[int]) -> int:
-        x=len(nums)
-        if x==1:
-            return 0
-        for i in range (x):
-            if i==0 and nums[i]>nums[i+1]:
-                return i
-            elif i==(x-1) and nums[i]>nums[i-1]:
-                return i
-            elif nums[i]>nums[i-1] and nums[i]>nums[i+1]:
-                return i
-            
