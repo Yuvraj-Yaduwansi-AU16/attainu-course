@@ -1,0 +1,154 @@
+Question 1. Write short note on Process Life cycle.
+Process:
+A process is a program in execution. Any program which is running
+in the computer is called process.
+Every process will have a unique ID called, ‘Pid’.
+Life Cycle of a Process:
+When a process executes, it passes through different states.
+These stages may differ in different operating systems, and the
+names of these states are also not standardized.
+In general, a process can have one of the following five states
+at a time.
+1 Start
+This is the initial state when a process is first started/created.
+2 Ready
+The process is waiting to be assigned to a processor.
+Ready processes are waiting to have the processor allocated to them
+by the operating system so that they can run.
+Process may come into this state after Start state or while running
+it by but interrupted by the scheduler to assign CPU to some other
+process.
+3 Running
+Once the process has been assigned to a processor by the OS
+scheduler,
+the process state is set to running and the processor executes its
+instructions.
+4 Waiting
+Process moves into the waiting state if it needs to wait for a
+resource, such as
+waiting for user input, or waiting for a file to become available.
+5 Terminated or Exit
+Once the process finishes its execution, or it is terminated by
+the operating system,
+it is moved to the terminated state where it waits to be removed
+from main memory.
+-----------------------------------------------------------------------
+Question 2. What role does an operating system perform?
+Operating System:
+An Operating System (OS) is an interface between a computer user
+and computer hardware.
+An operating system is a software which performs all the basic tasks
+like file management, memory management, process management,
+handling input and output, and controlling peripheral devices such
+as disk drives and printers.
+Important functions of an operating System:
+Security –
+The operating system uses password protection to protect user data
+and similar other techniques.
+It also prevents unauthorized access to programs and user data.
+Control over system performance –
+Monitors overall system health to help improve performance.
+records the response time between service requests and system
+response to have a complete view of the system health.
+This can help improve performance by providing important 
+information needed to troubleshoot problems.
+Job accounting –
+Operating system Keeps track of time and resources used by various
+tasks and users, this information can be used to track resource
+usage for a particular user or group of user.
+Error detecting aids –
+Operating system constantly monitors the system to detect errors
+and avoid the malfunctioning of computer system.
+Coordination between other software and users –
+Operating systems also coordinate and assign interpreters,
+compilers, assemblers and other software to the various users of
+the computer systems.
+ Memory Management –
+The operating system manages the Primary Memory or Main Memory.
+Main memory is made up of a large array of bytes or words where
+each byte or word is assigned a certain address.
+Main memory is a fast storage and it can be accessed directly by
+the CPU. For a program to be executed, it should be first loaded
+in the main memory.
+An Operating System performs the following activities for memory
+management:
+It keeps tracks of primary memory, i.e., which bytes of memory are
+used by which user program.
+The memory addresses that have already been allocated and the
+memory addresses of the memory that has not yet been used.
+In multi programming, the OS decides the order in which process
+are granted access to memory, and for how long.
+It Allocates the memory to a process when the process requests it
+and deallocates the memory when the process has terminated or is
+performing an I/O operation.
+Processor Management –
+In a multi programming environment, the OS decides the order in
+which processes have access to the processor, and how much
+processing time each process has.
+This function of OS is called process scheduling. An Operating
+System performs the following activities for processor management.
+Keeps tracks of the status of processes.
+The program which perform this task is known as traffic controller.
+Allocates the CPU that is processor to a process.
+De-allocates processor when a process is no more required.
+Device Management –
+An OS manages device communication via their respective drivers.
+It performs the following activities for device management. Keeps
+tracks of all devices connected to system.
+Designates a program responsible for every device known as the
+Input/Output controller.
+Decides which process gets access to a certain device and for how
+long.
+Allocates devices in an effective and efficient way.
+Deallocates devices when they are no longer required.
+File Management –
+A file system is organized into directories for efficient or easy
+navigation and usage.
+These directories may contain other directories and other files.
+An Operating System carries out the following file management
+activities.
+It keeps track of where information is stored, user access settings
+and status of every file and more…
+These facilities are collectively known as the file system. 
+----------------------------------------------------------------------------
+Question 3. What is a process ?
+Process:
+A process is a program in execution. Any program which is running
+in the computer is called process.
+Every process will have a unique ID called, ‘Pid’.
+------------------------------------------------------------------------
+Question 4. What is the job of a long term scheduler?
+It is also called a job scheduler.
+A long-term scheduler determines which programs are admitted to
+the system for processing.
+It selects processes from the queue and loads them into memory for
+execution.
+Process loads into the memory for CPU scheduling.
+------------------------------------------------------------------------
+Question 5. What is Response time?
+Response Time:
+Response Time is the time spent between the ready state and getting
+the CPU
+for the first time. Waiting Time is the total time taken by the
+process in the
+ready state.
+P ST CT ST – Schedule Time CT – Completion Time
+P0 0 5
+P1 3 7
+P2 5 3
+----------------------------------------------------------------------------
+Question 6. What is preemptive scheduling and non-preemptive
+scheduling?
+Preemptive Scheduling is a CPU scheduling technique that works by
+dividing time slots of CPU to a given process.
+The time slot given might be able to complete the whole process
+or might not be able to it.
+When the burst time of the process is greater than CPU cycle, it
+is placed back into the ready queue and will execute in the next
+chance.
+This scheduling is used when the process switch to ready state.
+Non-preemptive Scheduling is a CPU scheduling technique the
+process takes the resource (CPU time) and holds it till the process
+gets terminated or is pushed to the waiting state.
+No process is interrupted until it is completed, and after that
+processor switches to another process. 
