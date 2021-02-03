@@ -1,4 +1,3 @@
-import string
 class Solution:
     def check_Ipv4(self,ip):
         s = ip.split(".")
@@ -35,6 +34,7 @@ class Solution:
             else:
                 return "Neither"
         return "IPv6"
+    
     
     def validIPAddress(self, IP: str) -> str:
         if('.' in IP):
