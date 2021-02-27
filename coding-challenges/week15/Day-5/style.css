@@ -1,0 +1,55 @@
+#heading{
+    text-align: center;
+    color:rgb(20, 5, 73);
+    font-size: 80px;
+    font-style: italic;
+}
+
+#heading-class{
+    height: 25vh;
+    margin-top: 20vh;
+}
+.btn-default{
+    background:rgb(219, 18, 129);
+
+}
+
+.btn-warning{
+    background: orange;
+
+}
+.btn-info{
+    background: lightblue;
+
+}
+.btn-primary{
+    background: blue;
+
+}
+.btn-success{
+    background: #73AD21;
+
+}
+.btn-danger{
+
+    background: red;
+
+}
+#body{
+    background: rgb(0,36,16);
+    background: linear-gradient(90deg, rgba(0,36,16,0.50773812943146) 0%, rgba(121,9,81,0.6842087176667542) 46%, rgba(0,212,255,1) 100%);
+}
+
+.btn:hover{
+    color: mintcream;
+    background-color: rgb(228, 18, 18);
+}
+
+.btn{
+    font-size: xx-large;
+    margin-left: 2ch;
+    border-radius: 25px;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
