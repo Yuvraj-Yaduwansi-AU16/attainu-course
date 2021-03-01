@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b2cad2879e.js" crossorigin="anonymous"></script>
+
+</head>
+<h1 id="heading">No Ads Player</h1>
+<body>
+    <div class="container">
+        <button id ="back-button"><i class='fas fa-step-backward'></i></button>
+        <button id ="prev-button"><i class='fas fa-fast-backward'></i></button>
+        <button id ="play-button"><i class="fas fa-play"></i></button>
+        <button id ="fwd-button"><i class='fas fa-step-forward'></i></button>
+        <button id ="next-button"><i class='fas fa-fast-forward'></i></button>
+        <div class="slider_container"> 
+            <div class="current-time">00:00</div> 
+            <input type="range" min="1" max="100" value="0" class="seek_slider"> 
+            <div class="total-duration">00:00</div> 
+        </div>
+        
+        <div class="slider_volume"> 
+            <i class='fas fa-music'></i>
+            <i class="fa fa-volume-down"></i> 
+            <input type="range" min="1" max="100" value="99" class="volume_slider"> 
+            <i class="fa fa-volume-up"></i> 
+        </div>
+    </div>
+    
+</body>
+</html>

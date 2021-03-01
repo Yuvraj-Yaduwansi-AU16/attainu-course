@@ -1,0 +1,90 @@
+#heading{
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    letter-spacing: .2em;
+    margin: auto;
+    color: red;
+}
+
+body{
+    background-color: darkseagreen;
+}
+
+.container{
+    margin: auto;
+    width: 70%;
+    height: 80vh;
+    margin-top: 4vh;
+    right: 0%;
+    bottom: 0%;
+    position: relative;
+    background: rgb(121,9,81);
+    background: linear-gradient(90deg, rgba(121,9,81,0.6842087176667542) 46%, rgba(20,0,255,0.3200630594034489) 100%);
+    box-shadow: 10px 10px grey;
+}
+
+.container button{
+    position: absolute;
+    font-size: 90px;
+    border-radius: 50%;
+    opacity: 0.8;
+    top: 100px;
+    color:rgb(100, 192, 24);
+    background-color: #170563;
+    
+} 
+
+button#back-button{
+    margin-left: 10%;
+}
+button#prev-button{
+
+    margin-left: 25%;
+}
+button#play-button{
+
+    margin-left: 45%;
+}
+button#fwd-button{
+
+    margin-left: 65%;
+}
+button#next-button{
+
+    margin-left: 80%;
+}
+
+
+.slider_container{
+    position: relative;
+    top: 350px;
+    left: 250px;
+}
+
+.slider_container input{
+    width: 30vw;
+}
+
+.slider_container div{
+    display: inline;
+    color: whitesmoke;
+}
+
+.slider_volume{
+    position: relative;
+    top: 400px;
+    left: 350px;
+}
+
+.slider_volume input{
+    width:10vw ;
+}
+
+i{
+    color: whitesmoke;
+}
+
+i.fa-music{
+    margin-right: 15px;
+}
