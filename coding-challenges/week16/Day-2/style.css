@@ -1,0 +1,37 @@
+body{
+    width:100%;
+    background: #009FFF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+div.heading{
+    display: inline;
+    margin-right: 20vw;    
+}
+div.container{
+    border-bottom: 2px solid black;
+    position: fixed;
+    z-index: 5;
+    background-color:darkgreen;
+}
+
+
+div.boxes{
+    position: relative;
+    text-align: center;
+    top: 80px;
+    font-size: 5rem;
+    height:30vh;
+    width: 20vw;
+    background:brown;
+    margin-top: 20px;
+}
+
+div.footer{
+    width: 100%;
+    position: fixed;
+    background-color: green;
+    bottom: 10px;
+    text-align: center;
+}
