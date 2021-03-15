@@ -1,0 +1,10 @@
+div.card:hover , div.carousel-item img:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+div.card , div.carousel-item img{
+    transition:  0.7s ease-in-out;
+    opacity: .7;
+}
