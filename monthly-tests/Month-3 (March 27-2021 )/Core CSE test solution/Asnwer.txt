@@ -1,0 +1,137 @@
+-----------------------------Ans-1--------------------------------------------------------
+
+A Least Recently Used (LRU) Cache organizes items in order of their use, therefore allowing
+usto quickly check which item hasn't been used for the most amount of time.LRU cache is 
+often implemented by pairing a doubly linked list with a hash map.
+
+LRU caching scheme is basically removing the least recently used frame when the cache is full
+and a new item needs to be added /referenced which is not already present in the cache.
+
+If element is not present in the cache its called cache miss.If it is present then its called
+cache hit.
+
+We use two data structures to implement LRU Cache:
+a-) Queue -It is implemented using a double linked list wherein the maximum size refers to the
+	   total number of items present in the cache i.e.cache size.
+
+b-)A Hash- having a page number as key and address of the corresponding queue node as value.
+
+When an item or page is referenced then if it is present in the memory we detach the node of
+the list and bring it to the first of the queue else if its not present in the queue then we
+add a new node in the front and update the node addresses thereafter. If the queue is full in
+this case then we remove the last node (i.e. least recently used) and add the new node in the
+front of the queue.
+
+----------------------------------------------Ans-2)--------------------------------------------
+--- Browser checks cache for DNS entry to find the corresponding IP address of attainu.com.If not 
+    found in cache, ISP’s DNS server initiates a DNS query to find IP address of server that hosts 
+    the domain name.
+
+--- Then browser splits the URL into a hostname and a path.The HTTP request is then sent to ask for 
+    the data at the given hostname and path.
+
+--- The HTTP request goes to the DNS Server to get the respective IP address of the given hostname 
+    and path.A DNS server is a computer server that contains a mapped database of public IP addresses 
+    and their associated hostnames for everything on the Internet. 
+
+--- Then a TCP/IP (Transmission Control Protocol/Internet Protocol)  connection is established
+    to the computer specified via the IP address and then the browser sends the HTTP request 
+    to the given IP address of the Website.
+
+--- TCP/IP is a set of communication protocols used to interconnect network devices on the internet. 
+    When the TCP/IP connection is established data from the web server can be freely shared under 
+    the its protocols for the computer requesting the data.
+
+--- When the Web server reads the hostname and path it generates an HTTP response containing that 
+    data and sends the response to the browser.Now the received HTTP response is split into header 
+    and the body therefore allowing the browser to interpret the data accordingly in order to display 
+    it in the browser.
+
+-------------------Ans-3)-------------------------------------------------------------------------
+--------NAT---------------------
+Network Address Translation (NAT) is an Internet standard that enables a local-area 
+network (LAN) to use one set of IP addresses for internal traffic and a second set 
+of addresses for external traffic. Developed by Cisco, the NAT process relies on a 
+device (usually a router) to make all necessary IP address translations where the 
+LAN meets the Internet.
+
+
+Initially around 4 billion IP addresses were created and it was thought it'd be enough for the
+world,but as internet grew largely the amount addresses were decreasing rapidly therefore in
+order to tackle this problem NAT was introduced.NAT translates both public to private and 
+private to public adrresses.
+
+Users get one public IP address from their ISP which is used by all devices connected to the 
+network and all the devices connected to that router are assigned private IP addresses 
+respectively.
+
+What it does is basically is that now all devices wont need a separate public IP address therefore
+the decreasing rate of public address was saved. All devices will be connected to the router via
+private address and therefore the cost if also reduced as now 10-15 devices will need 1 public IP 
+instead of 10-15 separate ones respectively.
+
+
+It also converts public to private when any external user wants to connect to the private IP address
+connected computer.In this way the problem was solved via NAT
+
+------------ARP------------------
+
+The Address Resolution Protocol (ARP) is a communication protocol used for discovering 
+the link layer address, such as a MAC address, associated with a given internet layer 
+address, typically an IPv4 address. ARP is used to resolve IP addresses to MAC addresses.
+An IP address is used to locate a device on a network wherein a MAC address is what identifies the 
+actual device.
+
+
+So in order to find MAC address a device will look into its internal list called an ARP cache if 
+it doesn't find it there then it asks other devices in the local network for their MAC address
+respectively.Once th MAC address received by computer matches the one it was searching then 
+communication is establshed between them and therefore the address is also stored in cache.
+
+ARP cache stores IP address to MAC address association to make a network efficient.
+Two types of ARP entries are:
+	a)Dynamic : An entry is created automatically when a device sends broadcast message out on the
+	            network.
+	b-)Static: An entry where someone manually enters IP to MAC address association using ARP 
+		   command line utility.
+
+--------------------------------Ans-4)---------------------------------------------------------
+Deadlock is a condition wherein set of processes are blocked as each of them holds to a resource
+and is waiting for another resource acquired by other processes.
+
+A deadlock happens in operating system when two or more processes need
+some resource to complete their execution that is held by the other process.
+A deadlock occurs if the four Coffman conditions hold true. But these
+conditions are not mutually exclusive. They are given as follows −
+
+There are four conditions for deadlock to occur:
+a-) Mutual exclusion: If P1 is using R1 resource for example then no ther process can use it.
+b-) No preemption : It means we cannot pause the process as in a resource cannot be taken from 
+a process unless the process releases the resource.Therefore a resource cannot be preempted from 
+a process by force. A process can only release a resource voluntarily.
+
+c-) Hold &Wait : A process is holding at least one resource and waiting for resources.
+A process can hold multiple resources and still request more resources from
+other processes which are holding them.
+
+d-) Circular Wait : Some set of processes are waiting for one another in a circular manner as in 
+process one depends on process two , two depends on three and three depends on one thereby forming
+a circular chain.
+
+Banker's algorithm can solve Deadlock.
+
+
+-----------------------------------Ans-5)---------------------------------------------------------
+
+--- Process of finding the value with the help of logical memory is called Pagination.
+    It is a fixed size partitioning scheme for memory management.
+    In paging, secondary memory and main memory are divided into equal fixed size partitions.
+
+--- The partitions of main memory are called frames and that of secondary memory are called pages.
+
+--- Each process is divided into parts wherein the size of each part is the same as that of page size.
+
+--- The pages of process are stored in the frames of main memory depending upon their availability.
+
+--- It is a logical concept used to access the data faster.
+
