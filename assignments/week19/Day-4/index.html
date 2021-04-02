@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Card Holder</title>
+</head>
+
+<body>
+    <main class="container-fluid">
+        <div class="conatiner main my-5 mx-3">
+            <div class="conatiner my-5 img-container rounded">
+                <section class="remove-all">
+                    <div class="heading d-flex justify-content-between img-fluid">
+                        <img src="./img/ClipartKey_1591130.png" alt="" id="card-chip">
+                        <img src="./img/visa-logo-png-transparent.png" alt="" id="img-visa" class="rounded img-fluid">
+
+                    </div>
+                    <div class="container text-light d-flex justify-content-between border border-3" id="card-text">
+                        <span class="text-light fs-4" id="first">####</span>
+                        <span class="text-light fs-4" id="second">####</span>
+                        <span class="text-light fs-4" id="third">####</span>
+                        <span class="text-light fs-4" id="fourth">####</span>
+                    </div>
+                    <div class="container-flex d-flex justify-content-between">
+                        <section class="d-inline" id="name-section">
+                            <h3 class="left-heading text-light fs-6">Card Holder Name</h3>
+                            <p class="name text-light fs-5 text-uppercase">Lionel Messi</p>
+                        </section>
+                        <section class="d-inline" id="date-section">
+                            <h3 class="right-heading text-light fs-6">Expires</h3>
+                            <p class="exp-date text-light fs-5 text-uppercase">
+                                <span id="card-month-display">MM</span>
+                                <span>/</span>
+                                <span id="card-year-display">YY</span>
+                            </p>
+                        </section>
+                    </div>
+                </section>
+            </div>
+
+            <div class="container rounded" id="input-fields">
+                <form id="card-form">
+                    <label for="basic-url" class="form-label" id="first-element">Card Number</label>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control my-3" placeholder="Card Number Here" id="card-number"
+                            aria-describedby="basic-addon1">
+                    </div>
+
+                    <label for="basic-url" class="form-label my-3">Card Holder's Name</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Card Holder's Name Here" id="card-name"
+                            aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3 d-flex justify-content-between align-items-center">
+                        <section id="month">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" id="btn-month">Month</button>
+                            <ul class="dropdown-menu" id="month-dropdown">
+
+                            </ul>
+                        </section>
+
+
+                        <section id="year">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" id="btn-year">Year</button>
+                            <ul class="dropdown-menu" id="year-dropdown">
+
+                            </ul>
+                        </section>
+
+
+                        <section class="d-inline">
+                            <label for="basic-url" class="form-label my-3 mx-5">CVV</label>
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control" placeholder="CVV Code" id="cvv-input"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </section>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary" id="form-submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <!-- <img src="https://source.unsplash.com/400x300/?graffiti" alt=""> -->
+</body>
+
+</html>

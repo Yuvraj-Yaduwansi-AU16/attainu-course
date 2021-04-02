@@ -1,0 +1,79 @@
+body{
+    background-color:brown;
+}
+
+div.img-container{
+    position: relative;
+    left: 510px;
+    background-image: url(./img/photo-1615913911982-392089dcdb8c.jfif);
+    width: 480px;
+    height: 300px;
+    z-index: 5;
+}
+
+img#img-visa{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    right: 0%;
+    top: 0%;
+}
+img#card-chip{
+    position: absolute;
+    left: 2%;
+    top: 8%;
+    width: 40px;
+    height: 30px;
+}
+
+div#card-text{
+    border: white;
+    border-width: 2rem;
+    margin-top: 5rem;
+}
+h3.left-heading{
+    margin: 3rem 0 0.5rem 1rem;
+}
+p.name{
+    margin-left: 0.9rem; 
+}
+
+h3.right-heading{
+    margin: 3rem 1rem 0.5rem 0;
+}
+p.exp-date{
+    margin-right: 0.5rem; 
+}
+
+div#input-fields{
+    position: absolute;
+    margin-top: -150px;
+    width: 640px;
+    left: 450px;
+    background-color: white;
+}
+label#first-element{
+    margin-top: 15vh;
+}
+
+button#form-submit{
+    width: 38vw;
+    margin-bottom: 8vh;
+}
+
+@media screen and (max-width: 1110px) {
+    div.img-container{
+        left: 100px;
+    }
+    div#input-fields{
+        width: 580px;
+        left: 95px;    }
+}
+@media screen and (max-width: 763px) {
+    div.img-container{
+        left: 10px;
+    }
+    div#input-fields{
+        width: 580px;
+        left: 5px;    }
+  }
