@@ -1,0 +1,370 @@
+-----------------------------Ans-1---------------------------------------------------------------------------------------------------------------------------------------
+The four principles of object-oriented programming are encapsulation, abstraction, 
+inheritance, and polymorphism.
+
+-->Encapsulation
+Encapsulation is achieved when each object keeps its state private, inside a class. 
+Other objects don’t have direct access to this state. Instead, they can only call a list 
+of public functions — called methods.
+
+So, the object manages its own state via methods — and no other class can touch it unless 
+explicitly allowed. If you want to communicate with the object, you should use the methods 
+provided. But (by default), you can’t change the state.
+
+-->Abstraction
+Abstraction can be thought of as a natural extension of encapsulation.
+
+In object-oriented design, programs are often extremely large. And separate objects communicate 
+with each other a lot. So maintaining a large codebase like this for years — with changes along 
+the way — is difficult.
+
+Abstraction is a concept aiming to ease this problem.Applying abstraction means that each object 
+should only expose a high-level mechanism for using it.
+
+This mechanism should hide internal implementation details. It should only reveal operations relevant 
+for the other objects.
+
+Think — a coffee machine. It does a lot of stuff and makes quirky noises under the hood. But all you 
+have to do is put in coffee and press a button.
+
+Preferably, this mechanism should be easy to use and should rarely change over time. Think of it as a 
+small set of public methods which any other class can call without “knowing” how they work.
+
+
+-->Inheritance
+
+Objects are often very similar. They share common logic. But they’re not entirely the same.So how do we 
+reuse the common logic and extract the unique logic into a separate class? One way to achieve this is inheritance.
+
+It means that you create a (child) class by deriving from another (parent) class. This way, we form a hierarchy.
+The child class reuses all fields and methods of the parent class (common part) and can implement its own (unique part).
+
+If our program needs to manage public and private teachers, but also other types of people like students, 
+we can implement this class hierarchy.
+
+This way, each class adds only what is necessary for it while reusing common logic with the parent classes.
+
+-->Polymorphism
+
+Say we have a parent class and a few child classes which inherit from it. Sometimes we want to use a collection — 
+for example a list — which contains a mix of all these classes. Or we have a method implemented for the parent 
+class — but we’d like to use it for the children, too.
+
+This can be solved by using polymorphism.Simply put, polymorphism gives a way to use a class exactly like its 
+parent so there’s no confusion with mixing types. But each child class keeps its own methods as they are.
+
+This typically happens by defining a (parent) interface to be reused. It outlines a bunch of common methods. 
+Then, each child class implements its own version of these methods
+
+
+-----------------------------Ans-2------------------------------------------------------------------------------------------------------------------------------------------------
+In order to understand the TCP/IP model we need to understand the OSI model as TCP model
+just combines 5-6-7 layer into 1 layer known as Application layer.Rest all remain same.
+OSI model was used for Standardize Communication.Though the OSI model is referenced but its
+not used instead the TCP/IP model is used and is the big deal here.
+
+OSI model has seven layers-:
+1-Physical
+2-Data Link
+3-Network
+4-Transport
+5-Session
+6-Presentation
+7-Application
+
+Now the TCP model has mainly 4 layers
+1-Link
+2-Internet
+3-Transport
+4-Application
+Wherein the direction of the model flow decides whether we are sending or receiving traffic.
+
+The model is updated thereby forming these layers below:
+1-Physical
+2-Data Link
+3- Network
+4-Transport
+5-Application
+ Now we can see that these layers are somewhat similar to the OSI model wherein 5-6-7 just 
+becomes 1 layer.
+
+Protocol and devices at each layer are
+1-Physical-CABLES,NIC
+2-Data Link-ETHERNET,SWITCHES
+3- Network-IP,ROUTERS
+4-Transport-TCP,UDP
+5-Application -HTTP,FTP,SMTP
+
+>>>>>>>>> Network Access Layer/ Link Layer:
+This layer corresponds to the combination of Data Link Layer and Physical Layer of the OSI model. 
+It looks out for hardware addressing and the protocols present in this layer allows for the physical transmission of data.
+We just talked about ARP being a protocol of Internet layer, but there is a conflict about declaring it as a protocol of Internet Layer or Network access layer. 
+The first layer is the Process layer on the behalf of the sender and Network Access layer on the behalf of the receiver. 
+It is described as residing in layer 3, being encapsulated by layer 2 protocols.
+
+>>>>>>>>> Internet Layer:
+This layer parallels the functions of OSI’s Network layer. It defines the protocols which are responsible for logical 
+transmission of data over the entire network. The main protocols residing at this layer are:
+- IP – stands for Internet Protocol and it is responsible for delivering packets from the source host to the destination
+ host by looking at the IP addresses in the packet headers. IP has 2 versions: IPv4 and IPv6. 
+IPv4 is the one that most of the websites are using currently. But IPv6 is growing as the number of IPv4 addresses are 
+limited in number when compared to the number of users.
+
+- ICMP – stands for Internet Control Message Protocol. It is encapsulated within IP datagrams and is responsible for 
+   providing hosts with information about network problems.
+
+- ARP – stands for Address Resolution Protocol. Its job is to find the hardware address of a host from a known IP address. 
+ARP has several types: Reverse ARP, Proxy ARP, Gratuitous ARP and Inverse ARP.
+
+
+>>>>>>>> Host-to-Host Layer/ Transport Layer:
+This layer is analogous to the transport layer of the OSI model. It is responsible for end-to-end communication and 
+error-free delivery of data. It shields the upper-layer applications from the complexities of data. The two main protocols present in this layer are:
+- Transmission Control Protocol (TCP) – It is known to provide reliable and error-free communication between end systems. 
+It performs sequencing and segmentation of data. It also has acknowledgment feature and controls the flow of the data through 
+flow control mechanism. It is a very effective protocol but has a lot of overhead due to such features. Increased overhead leads to increased cost.
+
+- User Datagram Protocol (UDP) – On the other hand does not provide any such features. It is the go-to protocol if your application does not require 
+reliable transport as it is very cost-effective. Unlike TCP, which is connection-oriented protocol, UDP is connectionless.
+
+>>>>>>>>> Application Layer/ Process Layer:
+This layer performs the functions of top three layers of the OSI model: Application, Presentation and Session Layer. It is responsible for node-to-node 
+communication and controls user-interface specifications. Some of the protocols present in this layer are: HTTP, HTTPS, FTP, TFTP, Telnet, SSH, SMTP, 
+SNMP, NTP, DNS, DHCP, NFS, X Window, LPD. Have a look at Protocols in Application Layer for some information about these protocols. Protocols other 
+than those present in the linked article are:
+
+- HTTP and HTTPS – HTTP stands for Hypertext transfer protocol. It is used by the World Wide Web to manage communications between web browsers and 
+servers. HTTPS stands for HTTP-Secure. It is a combination of HTTP with SSL (Secure Socket Layer). It is efficient in cases where the browser needs to 
+fill out forms, sign in, authenticate and carry out bank transactions.
+
+- SSH – SSH stands for Secure Shell. It is a terminal emulations software similar to Telnet. The reason SSH is more preferred is because of its ability 
+to maintain the encrypted connection. It sets up a secure session over a TCP/IP connection.
+
+- NTP – NTP stands for Network Time Protocol. It is used to synchronize the clocks on our computer to one standard time source. It is very useful in 
+situations like bank transactions. Assume the following situation without the presence of NTP. Suppose you carry out a transaction, where your computer
+ reads the time at 2:30 PM while the server records it at 2:28 PM. The server can crash very badly if it’s out of sync.
+
+
+-----------------------------Ans-3------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Input: 
+in[]   = {N, M, P, O, Q}
+post[] = {N, P, Q, O, M}
+
+A:# A class to store a binary tree node
+class Node:
+    def _init_(self, key):
+        self.key = key
+ 
+ 
+# Recursive function to perform inorder traversal on a given binary tree
+def inorderTraversal(root):
+ 
+    if root is None:
+        return
+ 
+    inorderTraversal(root.left)
+    print(root.key, end=' ')
+    inorderTraversal(root.right)
+ 
+ 
+# Recursive function to perform postorder traversal on a given binary tree
+def postorderTraversal(root):
+ 
+    if root is None:
+        return
+ 
+    postorderTraversal(root.left)
+    postorderTraversal(root.right)
+    print(root.key, end=' ')
+ 
+ 
+# Recursive function to construct a binary tree from a given
+# inorder and postorder traversals
+def construct(start, end, postorder, pIndex, dict):
+ 
+    # base case
+    if start > end:
+        return None, pIndex
+ 
+    # Consider the next item from the end of a given postorder sequence.
+    # This value would be the root node of a subtree formed by sequence
+    # `inorder[start, end]`.
+    root = Node(postorder[pIndex])
+    pIndex = pIndex - 1
+ 
+    # search the current node index in inorder sequence to determine
+    # the boundary of the left and right subtree of the current node
+    index = dict[root.key]
+ 
+    # recursively construct the right subtree
+    root.right, pIndex = construct(index + 1, end, postorder, pIndex, dict)
+ 
+    # recursively construct the left subtree
+    root.left, pIndex = construct(start, index - 1, postorder, pIndex, dict)
+ 
+    # return the root node
+    return root, pIndex
+ 
+ 
+# Construct a binary tree from inorder and postorder traversals.
+# This function assumes that the input is valid, i.e., given
+# inorder and postorder sequences forming a binary tree.
+def constructTree(inorder, postorder):
+ 
+    # get size
+    n = len(inorder)
+ 
+    # dictionary is used to efficiently find the index of any element in
+    # a given inorder sequence
+    dict = {}
+    for i, e in enumerate(inorder):
+        dict[e] = i
+ 
+    # `pIndex` stores the index of the next unprocessed node from the end
+    # of the postorder sequence
+    pIndex = n - 1
+    return construct(0, n - 1, postorder, pIndex, dict)[0]
+ 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Main Tree>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+if _name_ == '_main_':
+
+Output: Root of below tree
+      M
+    /   \
+   N     O
+	/  \
+       P     Q 
+
+-----------------------------Ans-5-------------------------------------------------------------------------------------------------------------------------------------------------
+
+A Least Recently Used (LRU) Cache organizes items in order of their use, therefore allowing
+usto quickly check which item hasn't been used for the most amount of time.LRU cache is 
+often implemented by pairing a doubly linked list with a hash map.
+
+LRU caching scheme is basically removing the least recently used frame when the cache is full
+and a new item needs to be added /referenced which is not already present in the cache.
+
+If element is not present in the cache its called cache miss.If it is present then its called
+cache hit.
+
+We use two data structures to implement LRU Cache:
+a-) Queue -It is implemented using a double linked list wherein the maximum size refers to the
+	   total number of items present in the cache i.e.cache size.
+
+b-)A Hash- having a page number as key and address of the corresponding queue node as value.
+
+When an item or page is referenced then if it is present in the memory we detach the node of
+the list and bring it to the first of the queue else if its not present in the queue then we
+add a new node in the front and update the node addresses thereafter. If the queue is full in
+this case then we remove the last node (i.e. least recently used) and add the new node in the
+front of the queue.
+
+
+--------------------------------Ans-6-------------------------------------------------------------------------------------------------------------------------------------------------
+Virtual memory is a feature of an operating system that enables a computer to be able to compensate 
+shortages of physical memory by transferring pages of data from random access memory to disk storage.
+
+This process is done temporarily and is designed to work as a combination of RAM and space on the hard disk.
+This means that when RAM runs low, virtual memory can move data from it to a space called a paging file. 
+This process allows for RAM to be freed up so that a computer can complete the task.
+
+Occasionally a user might be shown a message that says the virtual memory is running low, this means that 
+either more RAM needs to be added, or the size of the paging file needs to be increased.
+
+Virtual Memory is a storage allocation scheme in which secondary memory can be addressed as though it were 
+part of main memory. The addresses a program may use to reference memory are distinguished from the addresses 
+the memory system uses to identify physical storage sites, and program generated addresses are translated 
+automatically to the corresponding machine addresses.
+
+The size of virtual storage is limited by the addressing scheme of the computer system and amount of secondary 
+memory is available not by the actual number of the main storage locations.
+
+It is a technique that is implemented using both hardware and software. It maps memory addresses used by a program, 
+called virtual addresses, into physical addresses in computer memory.
+
+All memory references within a process are logical addresses that are dynamically translated into physical addresses 
+at run time. This means that a process can be swapped in and out of main memory such that it occupies different places 
+in main memory at different times during the course of execution.
+
+A process may be broken into number of pieces and these pieces need not be continuously located in the main memory 
+during execution. The combination of dynamic run-time address translation and use of page or segment table permits this.
+If these characteristics are present then, it is not necessary that all the pages or segments are present in the main 
+memory during execution. This means that the required pages need to be loaded into memory whenever required. 
+Virtual memory is implemented using Demand Paging or Demand Segmentation.
+
+--------------------------------Ans-7)------------------------------------------------------------------------------------------------------------------------------------------------
+Deadlock is a condition wherein set of processes are blocked as each of them holds to a resource
+and is waiting for another resource acquired by other processes.
+
+A deadlock happens in operating system when two or more processes need
+some resource to complete their execution that is held by the other process.
+A deadlock occurs if the four Coffman conditions hold true. But these
+conditions are not mutually exclusive. They are given as follows −
+
+There are four conditions for deadlock to occur:
+a-) Mutual exclusion: If P1 is using R1 resource for example then no ther process can use it.
+b-) No preemption : It means we cannot pause the process as in a resource cannot be taken from 
+a process unless the process releases the resource.Therefore a resource cannot be preempted from 
+a process by force. A process can only release a resource voluntarily.
+
+c-) Hold &Wait : A process is holding at least one resource and waiting for resources.
+A process can hold multiple resources and still request more resources from
+other processes which are holding them.
+
+d-) Circular Wait : Some set of processes are waiting for one another in a circular manner as in 
+process one depends on process two , two depends on three and three depends on one thereby forming
+a circular chain.
+
+Banker's algorithm can solve Deadlock.
+
+----------------------------------------------Ans-8)---------------------------------------------------------------------------------------------------------------------------------
+--------NAT---------------------
+Network Address Translation (NAT) is an Internet standard that enables a local-area 
+network (LAN) to use one set of IP addresses for internal traffic and a second set 
+of addresses for external traffic. Developed by Cisco, the NAT process relies on a 
+device (usually a router) to make all necessary IP address translations where the 
+LAN meets the Internet.
+
+
+Initially around 4 billion IP addresses were created and it was thought it'd be enough for the
+world,but as internet grew largely the amount addresses were decreasing rapidly therefore in
+order to tackle this problem NAT was introduced.NAT translates both public to private and 
+private to public adrresses.
+
+Users get one public IP address from their ISP which is used by all devices connected to the 
+network and all the devices connected to that router are assigned private IP addresses 
+respectively.
+
+What it does is basically is that now all devices wont need a separate public IP address therefore
+the decreasing rate of public address was saved. All devices will be connected to the router via
+private address and therefore the cost if also reduced as now 10-15 devices will need 1 public IP 
+instead of 10-15 separate ones respectively.
+
+
+It also converts public to private when any external user wants to connect to the private IP address
+connected computer.In this way the problem was solved via NAT
+
+------------ARP------------------
+
+The Address Resolution Protocol (ARP) is a communication protocol used for discovering 
+the link layer address, such as a MAC address, associated with a given internet layer 
+address, typically an IPv4 address. ARP is used to resolve IP addresses to MAC addresses.
+An IP address is used to locate a device on a network wherein a MAC address is what identifies the 
+actual device.
+
+
+So in order to find MAC address a device will look into its internal list called an ARP cache if 
+it doesn't find it there then it asks other devices in the local network for their MAC address
+respectively.Once th MAC address received by computer matches the one it was searching then 
+communication is establshed between them and therefore the address is also stored in cache.
+
+ARP cache stores IP address to MAC address association to make a network efficient.
+Two types of ARP entries are:
+	a)Dynamic : An entry is created automatically when a device sends broadcast message out on the
+	            network.
+	b-)Static: An entry where someone manually enters IP to MAC address association using ARP 
+		   command line utility.
+
+
+
