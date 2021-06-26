@@ -1,0 +1,172 @@
+----------------------------------------------Ans-1)-------------------------------------------
+from collections import deque
+
+class LRUCache:
+    
+    def __init__(self, c):
+        self.c = c
+        self.m = dict()
+        self.deq = deque()
+        
+    def get(self, key):
+        if key in self.m:
+            value=self.m[key]
+            self.deq.remove(key)
+            self.deq.append(key)
+            return value
+        else:
+            return -1
+        
+    def put(self, key, value):
+        if key not in self.m:
+            if len(self.deq) == self.c:
+                oldest = self.deq.popleft()
+                del self.m[oldest]
+        else:
+            self.deq.remove(key)
+            
+        self.m[key] = value
+        self.deq.append(key)
+
+----------------------------------------------Ans-2)--------------------------------------------
+--- Browser checks cache for DNS entry to find the corresponding IP address of attainu.com.If not 
+    found in cache, ISP’s DNS server initiates a DNS query to find IP address of server that hosts 
+    the domain name.
+
+--- Then browser splits the URL into a hostname and a path.The HTTP request is then sent to ask for 
+    the data at the given hostname and path.
+
+--- The HTTP request goes to the DNS Server to get the respective IP address of the given hostname 
+    and path.A DNS server is a computer server that contains a mapped database of public IP addresses 
+    and their associated hostnames for everything on the Internet. 
+
+--- Then a TCP/IP (Transmission Control Protocol/Internet Protocol)  connection is established
+    to the computer specified via the IP address and then the browser sends the HTTP request 
+    to the given IP address of the Website.
+
+--- TCP/IP is a set of communication protocols used to interconnect network devices on the internet. 
+    When the TCP/IP connection is established data from the web server can be freely shared under 
+    the its protocols for the computer requesting the data.
+
+--- When the Web server reads the hostname and path it generates an HTTP response containing that 
+    data and sends the response to the browser.Now the received HTTP response is split into header 
+    and the body therefore allowing the browser to interpret the data accordingly in order to display 
+    it in the browser
+
+--------------------------------------------Ans-3)--------------------------------------------------------
+
+Private IP address-:
+	-Scope is local
+	-It is used to communicate within network.
+	-Private IP addresses of the systems connected in a network differ in a uniform manner.
+	-It works only in LAN
+	-It is used to load network operating system.
+	-It is available in free of cost.
+	-Private IP can be known by entering “ipconfig” on command prompt.
+	-Example: 192.168.1.10
+
+Public IP Address-:
+	-Scope is global.
+	-It is used to communicate outside the network.
+	-Public IP may differ in uniform or non-uniform manner.
+	-It is used to get internet service.
+	-It is controlled by ISP.
+	-It is not free of cost.
+	-Public IP can be known by searching “what is my ip” on google.
+	-Example: 17.5.7.8
+
+
+--------------------------------Ans-4)--------------------------------------------------------------------------
+Deadlock is a condition wherein set of processes are blocked as each of them holds to a resource
+and is waiting for another resource acquired by other processes.
+
+A deadlock happens in operating system when two or more processes need
+some resource to complete their execution that is held by the other process.
+A deadlock occurs if the four Coffman conditions hold true. But these
+conditions are not mutually exclusive. They are given as follows −
+
+There are four conditions for deadlock to occur:
+a-) Mutual exclusion: If P1 is using R1 resource for example then no ther process can use it.
+b-) No preemption : It means we cannot pause the process as in a resource cannot be taken from 
+a process unless the process releases the resource.Therefore a resource cannot be preempted from 
+a process by force. A process can only release a resource voluntarily.
+
+c-) Hold &Wait : A process is holding at least one resource and waiting for resources.
+A process can hold multiple resources and still request more resources from
+other processes which are holding them.
+
+d-) Circular Wait : Some set of processes are waiting for one another in a circular manner as in 
+process one depends on process two , two depends on three and three depends on one thereby forming
+a circular chain.
+
+Banker's algorithm can solve Deadlock.
+
+-------------------------------------Ans-5)--------------------------------------------------------------
+1) Swap Memory-:
+	Memory swapping is a memory reclamation method wherein memory contents not currently in use are swapped to 
+	a disk to make the memory available for other applications or processes. The exact state or "page" of memory 
+	is copied to the disk to make the data contiguous and easy to restore later.
+
+	The purpose of the swapping in operating system is to access the data present in the hard disk and bring it to 
+	RAM so that the application programs can use it. The thing to remember is that swapping is used only when data is not present in RAM.
+
+	Although the process of swapping affects the performance of the system, it helps to run larger and more than 
+	one process. This is the reason why swapping is also referred to as memory compaction.
+
+	The concept of swapping has divided into two more concepts: Swap-in and Swap-out.
+
+	-Swap-out is a method of removing a process from RAM and adding it to the hard disk.
+	-Swap-in is a method of removing a program from a hard disk and putting it back into the main memory or RAM
+
+2) Context Switching-:
+	Context Switching involves storing the context or state of a process so that it can be reloaded when 
+	required and execution can be resumed from the same point as earlier. This is a feature of a multitasking 
+	operating system and allows a single CPU to be shared by multiple processes
+
+	The steps involved in context switching are as follows −
+
+	-Save the context of the process that is currently running on the CPU. Update the process control block and other important fields.
+	-Move the process control block of the above process into the relevant queue such as the ready queue, I/O queue etc.
+	-Select a new process for execution.
+	-Update the process control block of the selected process. This includes updating the process state to running.
+	-Update the memory management data structures as required.
+	-Restore the context of the process that was previously running when it is loaded again on the processor. This is done by loading 
+	the previous values of the process control block and registers.
+
+3) IPv4-:
+
+	Internet Protocol Version 4 (IPv4) is the fourth revision of the Internet Protocol and a widely used protocol in data communication 
+	over different kinds of networks. IPv4 is a connectionless protocol used in packet-switched layer networks, such as Ethernet. It 
+	provides the logical connection between network devices by providing identification for each device. There are many ways to configure 
+	IPv4 with all kinds of devices – including manual and automatic configurations – depending on the network type.
+
+	IPv4 is based on the best-effort model. This model guarantees neither delivery nor avoidance of duplicate delivery; these aspects are
+	handled by the upper layer transport.
+	
+	Parts of IPv4
+	Network part: 
+		The network part indicates the distinctive variety that’s appointed to the network. The network part conjointly identifies the 
+		category of the network that’s assigned.
+	Host Part: 
+		The host part uniquely identifies the machine on your network. This part of the IPv4 address is assigned to every host. 
+		For each host on the network, the network part is the same, however, the host half must vary.
+	Subnet number: 
+		This is the nonobligatory part of IPv4. Local networks that have massive numbers of hosts are divided into subnets and subnet 
+		numbers are appointed to that.
+
+4) IPv6-:
+	Internet Protocol Version 6 (IPv6) is an Internet Protocol (IP) used for carrying data in packets from a source to a destination over 
+	various networks. IPv6 is the enhanced version of IPv4 and can support very large numbers of nodes as compared to IPv4. It allows for 
+	2128 possible node, or address, combinations.IPv6 is also known as Internet Protocol Next Generation (IPng).
+
+	In IPv6 representation, we have three addressing methods :
+
+		Unicast Address: Unicast Address identifies a single network interface. A packet sent to unicast address is delivered to the 
+				 interface identified by that address.
+
+		Multicast Address: Multicast Address is used by multiple hosts, called as Group, acquires a multicast destination address. 
+				   These hosts need not be geographically together. If any packet is sent to this multicast address, it will 
+				   be distributed to all interfaces corresponding to that multicast address.
+
+		Anycast Address: Anycast Address is assigned to a group of interfaces. Any packet sent to anycast address will be delivered to 
+				 only one member interface (mostly nearest host possible).
